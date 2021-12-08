@@ -1,38 +1,25 @@
-function getOption1() {
-    let question1 = document.getElementById("question1").value;
-    output1 = selectElement.value, node1;
-    for ( var i = nodes.length; i--; ) {
-        node1 = nodes[i];  
+var btn = document.getElementById("btnsubmit")
+btn.addEventListener('click', click_determine);
+function click_determine(){
+    var question01 = document.getElementById("question1");
+    var as1 = question01.options[question01.selectedIndex].value;
+    var question02 = document.getElementById("question2");
+    var as2 = question02.options[question02.selectedIndex].value;
+    var question03 = document.getElementById("question3");
+    var as3 = question03.options[question03.selectedIndex].value;
+    var imgchange = document.getElementById("changeimg");
+    var title = document.getElementById("bltitle");
+    
+    if(as1==question01.options[1].value && as2==question02.options[3].value && as3==question03.options[2].value){
+        title.textContent = "You are Alien";
+        imgchange.src ="../IMG/alien.jpg";
     }
-}
-function getOption2() {
-    let question2 = document.getElementById("question2").value;
-    output2 = selectElement.value, node2;
-    for ( var j = nodes.length; j--; ) {
-        node2 = nodes[j];  
+    else if(as1==question01.options[3].value && as2==question02.options[1].value && as3==question03.options[1].value){
+        title.textContent = "You are Bizarre";
+        imgchange.src ="../IMG/bizarre.jpg";
     }
-}
-function getOption3() {
-    let question3 = document.getElementById("question3").value;
-    output3 = selectElement.value, node3;
-    for ( var k = nodes.length; k--; ) {
-        node3 = nodes[k];  
+    else{
+        title.textContent = "You are Normal";
+        imgchange.src ="../IMG/normal.jpg";
     }
-}
-let btnsubmit = document.getElementById("btnsubmit");
-let bltitlet = document.getElementById("bltitlet");
-let imgaswer = document.getElementById("imgaswer");
-
-imgaswer.addEventListener=("click", changeimg);
-
-function changeimg() {
-    let choose1 = node1.value;
-    let choose2 = node2.value;
-    let choose3 = node3.value;
-
-
-    if(node1=nodes[1]; node2=nodes[3]; node3=nodes[2]) {
-        
-    }
-  
 }
